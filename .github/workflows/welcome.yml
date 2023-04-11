@@ -9,7 +9,7 @@ jobs:
     name: welcome comment
     runs-on: ubuntu-latest
     steps:
-      - run: gp pr comment $PR_URL --body "Welcome to this repository!"
+      - run: gh pr comment $PR_URL --body "Welcome to this repository!"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR_URL: ${{ github.event.pull_request.html_url }}
